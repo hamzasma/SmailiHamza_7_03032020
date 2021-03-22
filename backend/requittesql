@@ -1,0 +1,8 @@
+//pour recuperer les posts  
+SELECT  `posttext`, `imageUrl`, `videoUrl`, `user_id` FROM `userpost`
+INNER JOIN following
+    ON following.followingId= userpost.user_id
+INNER JOIN user
+    ON user.id= following.userId
+    
+
